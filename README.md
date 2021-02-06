@@ -18,7 +18,8 @@ To do things like display textures or render in a window you'll need to add some
 
 Some of these might be addressed better in the future:
 
-* Only 3x3 transformation matrix is provided (although it would be pretty easy to swap out with a more complex one)
+* ~Only 3x3 transformation matrix is provided (although it would be pretty easy to swap out with a more complex one)~
+  - 4x4 matrix with translate/rotate/scale is now implemented
 * No textures (each triangle just has a "pixel" value, although textures should be easy to add given the position in the triangle is already calculated)
 * No pixel blending is provided (although it would be easy to add at the point where the pixel is set)
 * No lookup for which triangle is at a certain position for mouse clicks (although that would be easy to add as a special case of the renderer)
