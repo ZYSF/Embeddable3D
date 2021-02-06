@@ -122,10 +122,10 @@ static void e3d_target_paint(e3d_target_t* target, e3d_matrix_t* matrix, e3d_tri
 
     
     e3d_int_t minx = (e3d_int_t)e3d_float_max(0, ceil(e3d_float_min(a.x, e3d_float_min(b.x, c.x))));
-    e3d_int_t maxx = (e3d_int_t)e3d_float_max(target->width - 1, floor(e3d_float_max(a.x, e3d_float_max(b.x, c.x))));
+    e3d_int_t maxx = (e3d_int_t)e3d_float_min(target->width - 1, floor(e3d_float_max(a.x, e3d_float_max(b.x, c.x))));
 
     e3d_int_t miny = (e3d_int_t)e3d_float_max(0, ceil(e3d_float_min(a.y, e3d_float_min(b.y, c.y))));
-    e3d_int_t maxy = (e3d_int_t)e3d_float_max(target->height - 1, floor(e3d_float_max(a.y, e3d_float_max(b.y, c.y))));
+    e3d_int_t maxy = (e3d_int_t)e3d_float_min(target->height - 1, floor(e3d_float_max(a.y, e3d_float_max(b.y, c.y))));
     /*
     e3d_int_t minx = 0;
     e3d_int_t maxx = target->width - 1;
