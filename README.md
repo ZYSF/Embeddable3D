@@ -11,7 +11,8 @@ To do things like display textures or render in a window you'll need to add some
 
 * Does most of the work required for a useful software renderer
 * Very simple (only a couple of hundred lines of code)
-* Should compile just about anywhere
+* Should compile just about anywhere (only depends on libc/libm)
+* Doesn't assume any particular memory management environment (only uses stack allocation internally, other structures are always allocated by the caller)
 
 ## Limitations
 
@@ -21,6 +22,8 @@ Some of these might be addressed better in the future:
 * No textures (each triangle just has a "pixel" value, although textures should be easy to add given the position in the triangle is already calculated)
 * No pixel blending is provided (although it would be easy to add at the point where the pixel is set)
 * No lookup for which triangle is at a certain position for mouse clicks (although that would be easy to add as a special case of the renderer)
+* Not very well-optimised
+* No high-level/convenience API (e.g. you have to initialise a matrix yourself)
 
 ## Example
 
