@@ -24,7 +24,7 @@ Some of these might be addressed better in the future:
 * No pixel blending is provided (although it would be easy to add at the point where the pixel is set)
 * No lookup for which triangle is at a certain position for mouse clicks (although that would be easy to add as a special case of the renderer)
 * Not very well-optimised
-* No high-level/convenience API (e.g. you have to initialise a matrix yourself)
+* No high-level/convenience API ~(e.g. you have to initialise a matrix yourself)~
 
 ## Example
 
