@@ -9,6 +9,7 @@ e3d_vertex_t* v(e3d_float_t x, e3d_float_t y, e3d_float_t z) {
 	result->x = x;
 	result->y = y;
 	result->z = z;
+	result->a = 1.0;
 
 	return result;
 }
@@ -48,6 +49,9 @@ int main(int argc, const char** argv) {
 	e3d_float_t heading = rad(argc >= 2 ? atof(argv[1]) : 110.0);
 	
 	e3d_matrix_t headx;
+	e3d_matrix_reset(&headx);
+	e3d_matrix_rotate(&headx, 1, 0, 0, heading);
+	/*
 	headx.values[0] = cos(heading);
 	headx.values[1] = 0;
 	headx.values[2] = -sin(heading);
@@ -57,9 +61,13 @@ int main(int argc, const char** argv) {
 	headx.values[6] = sin(heading);
 	headx.values[7] = 0;
 	headx.values[8] = cos(heading);
+	*/
 
 	e3d_float_t pitch = rad(argc >= 3 ? atof(argv[2]) : 190);
 	e3d_matrix_t pitchx;
+	e3d_matrix_reset(&pitchx);
+	e3d_matrix_rotate(&pitchx, 0, 1, 0, pitch);
+	/*
 	pitchx.values[0] = 1;
 	pitchx.values[1] = 0;
 	pitchx.values[2] = 0;
@@ -69,6 +77,7 @@ int main(int argc, const char** argv) {
 	pitchx.values[6] = 0;
 	pitchx.values[7] = -sin(pitch);
 	pitchx.values[8] = cos(pitch);
+	*/
 
 	e3d_matrix_t x;
 	e3d_matrix_multiply(&x, &headx, &pitchx);
