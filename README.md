@@ -9,8 +9,18 @@ To do things like display textures or render in a window you'll need to add some
 
 ## Features
 
-* Very simple
-* Should compile anywhere
+* Does most of the work required for a useful software renderer
+* Very simple (only a couple of hundred lines of code)
+* Should compile just about anywhere
+
+## Limitations
+
+Some of these might be addressed better in the future:
+
+* Only 3x3 transformation matrix is provided (although it would be pretty easy to swap out with a more complex one)
+* No textures (each triangle just has a "pixel" value, although textures should be easy to add given the position in the triangle is already calculated)
+* No pixel blending is provided (although it would be easy to add at the point where the pixel is set)
+* No lookup for which triangle is at a certain position for mouse clicks (although that would be easy to add as a special case of the renderer)
 
 ## Example
 
@@ -36,13 +46,6 @@ The demo program just renders a scene made of triangles (with ASCII "pixels"), a
     ############################################################
     ############################################################
     ############################################################
-
-## Limitations
-
-* Only 3x3 transformation matrix is provided (although it would be pretty easy to swap out with a more complex one)
-* No textures (each triangle just has a "pixel" value, although textures should be easy to add in theory)
-* No pixel blending is provided (although it would be easy to add at the point where the pixel is set)
-* No lookup for which triangle is at a certain position for mouse clicks (although that would be easy to add as a special case of the renderer)
 
 ## See Also
 
