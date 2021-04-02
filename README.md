@@ -55,3 +55,4 @@ The demo program just renders a scene made of triangles (with ASCII "pixels"), a
 
 * I mostly used this tutorial as a reference: http://blog.rogach.org/2015/08/how-to-create-your-own-simple-3d-render.html
 * For a more robust (but still fairly simple) 3D engine, try: https://github.com/LukasBanana/PicoRenderer
+* Another cool project over at GitLab is https://gitlab.com/drummyfish/small3dlib
